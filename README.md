@@ -14,6 +14,7 @@ automate the process of purchasing pubg uc using selenium web driver for purchas
   - it runs the tkinter app in a new thread,
   - starts the telegram bot that listens to updates, responds to users, and appends purchases to the ```PURCHASE_QUEUE```
   - starts a new thread for managing purchases which starts the web driver, waits for a new purchase to be in the ```PURCHASE_QUEUE```, and tries to make it.
+  - saves the codes, users, and purchases to **SQLite3** db.
 
 
 ### Notes:
