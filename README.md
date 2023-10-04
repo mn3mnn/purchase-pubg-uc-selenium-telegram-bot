@@ -1,6 +1,7 @@
 # purchase-pubg-uc-selenium-telegram-bot
 automate the process of purchasing pubg uc using selenium web driver for purchasing, telegram bot enables authenticated users to start purchases and view their history, and Tkinter desktop app for administration.
 
+--**Kindly see ```usage.mp4``` for a quick example of how it works.**
 
 ### Overview
 - **Selenium bot**: for purchasing pubg uc on the official pubg website (payment is via pre-added SMS codes), the bot opens pubg website and signs in, then chooses Iraq as the country, chooses payment method and amount (static), waits for any user to start a purchase, enters the player_id and do payment n times as requested.
@@ -17,6 +18,5 @@ automate the process of purchasing pubg uc using selenium web driver for purchas
 
 ### Notes:
 - the admin is the person who runs/stops the bot, adds users to it, adds mobile SMS codes used for payment, tracks users' usage, and resets it
-- the payment method used in this app works ONLY with Iraqi player_id and Iraqi IP address.
-
-  
+- the payment method used in this app works ONLY with **Iraqi player_id and Iraqi IP address.**
+- **The source code for telegram and selenium bots is removed as the client requested.**
