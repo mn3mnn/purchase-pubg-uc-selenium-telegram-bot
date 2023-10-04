@@ -1,5 +1,5 @@
 # purchase-pubg-uc-selenium-telegram-bot
-automate the process of purchasing pubg uc using selenium for purchasing, telegram bot enables users to start purchases and view their history, and Tkinter desktop app for administration.
+automate the process of purchasing pubg uc using selenium web driver for purchasing, telegram bot enables authenticated users to start purchases and view their history, and Tkinter desktop app for administration.
 
 
 ### Overview
@@ -9,13 +9,14 @@ automate the process of purchasing pubg uc using selenium for purchasing, telegr
 
 - **Tkinter desktop app**: GUI app for the admin enables him to start/stop the bot, add users to the bot via their telegram username, edit/delete/disable users, set limit and reset usage for users, view/search all users and their usage, and add/delete SMS codes
 
+- **How it works**: the main file here is ```bot_manager.py```, uses functions from ```purchase_bot.py``` and ```db_manager.py```,
+  - it runs the tkinter app in a new thread,
+  - starts the telegram bot that listens to updates, responds to users, and appends purchases to the ```PURCHASE_QUEUE```
+  - starts a new thread for managing purchases which starts the web driver, waits for a new purchase to be in the ```PURCHASE_QUEUE```, and tries to make it.
 
-## Features
 
-- **User-Friendly Interaction**: The bot offers a user-friendly interface with options to start a new purchase or view purchase history.
+### Notes:
+- the admin is the person who runs/stops the bot, adds users to it, adds mobile SMS codes used for payment, tracks users' usage, and resets it
+- the payment method used in this app works ONLY with Iraqi player_id and Iraqi IP address.
 
-- **Multi-User Support**: Users can initiate UC purchases concurrently, and the bot manages a purchase queue.
-
-- **Purchase History**: Users can request their purchase history, which includes details of completed transactions.
-
-- **Error Handling**: The bot includes robust error handling to handle exceptions gracefully.
+  
